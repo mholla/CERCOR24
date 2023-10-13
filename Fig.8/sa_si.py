@@ -29,14 +29,15 @@ sap = np.array([210, 225, 228, 253, 261, 718, 750, 761, 2173]) #surface area phy
 # sap1 = np.array([14, 53, 98])
 sap2 = np.array([210, 225, 228, 253, 261])
 sap3 = np.array([718, 750, 761])
-sap4 = np.array([2173])
-
+sap4 = np.array([2163, 2182, 2173])
+# sap4 = np.array([2173])
 
 sip = np.array([0.18, 0.19, 0.20, 0.19, 0.22, 0.18, 0.16, 0.17, 0.11]) #gyrification index phylogenesis
 # sip1 = np.array([1.03, 1.35, 1.53])
 sip2 = np.array([0.18, 0.19, 0.20, 0.18, 0.22])
 sip3 = np.array([0.18, 0.16, 0.17])
-sip4 = np.array([0.10])
+sip4 = np.array([0.116,0.118,0.118])
+# sip4 = np.array([0.10])
 
 sao = np.array([248,279,333,396,405,501,577,616,717,769,881,917,968,1034,1132]) #surface area ontogenesis
 gio = np.array([0.208,0.199,0.175,0.169,0.155,0.140,0.129,0.122,0.112,0.104,0.096,0.091,0.086,0.081,0.071]) #gyrification index ontogenesis
@@ -55,7 +56,7 @@ plt.plot(sap4, sip4, 'o', color='#440154', markersize=5, label='xlarge', alpha =
 plt.plot(sao, si, 'o', color='#440154', markersize=5, label='human growth', alpha = 0.7) 
 
 plt.legend()
-# plt.xscale('log') 
+plt.xscale('log') 
 #plt.yscale('log')
 plt.savefig('sa_si.jpg', dpi=500, bbox_inches='tight')
 

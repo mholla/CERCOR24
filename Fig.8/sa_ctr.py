@@ -22,14 +22,17 @@ sap = np.array([210, 225, 228, 253, 261, 718, 750, 761, 2173]) #surface area phy
 # sap1 = np.array([14, 53, 98])
 sap2 = np.array([210, 225, 228, 253, 261])
 sap3 = np.array([718, 750, 761])
-sap4 = np.array([2173])
+sap4 = np.array([2163, 2182, 2173])
+sap4 = np.array([2163, 2182, 2173])
+# sap4 = np.array([2173])
 
 
 ctrp = np.array([1.23, 1.33, 1.18, 1.19, 1.19, 1.19, 1.35, 1.39, 1.3]) #cortical thickness ratio phylogenesis
 # ctrp1 = np.array([1.05, 1.19, 1.18])
 ctrp2 = np.array([1.23, 1.33, 1.18, 1.19, 1.19])
 ctrp3 = np.array([1.19, 1.35, 1.39])
-ctrp4 = np.array([1.3])
+ctrp4 = np.array([1.28,1.27,1.26])
+# ctrp4 = np.array([1.3])
 
 sao = np.array([248,279,333,396,405,501,577,616,717,769,881,917,968,1034,1132]) #surface area ontogenesis
 ctro = np.array([1.04,1.08,1.11,1.13,1.13,1.15,1.17,1.18,1.18,1.20,1.21,1.20,1.21,1.21,1.21])
@@ -50,7 +53,7 @@ plt.plot(sap4, ctrp4, 'o', color='#440154', markersize=5, label='large', alpha =
 plt.plot(sao, ctro, 'o', color='#440154', markersize=5, label='human growth', alpha = 0.7) 
 
 #plt.legend()
-# plt.xscale('log') 
+plt.xscale('log') 
 # plt.yscale('log')
 # plt.ylim(0,3)
 plt.savefig('sa_ctr.jpg', dpi=500, bbox_inches='tight')

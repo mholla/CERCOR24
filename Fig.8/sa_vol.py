@@ -26,14 +26,16 @@ sap = np.array([210, 225, 228, 253, 261, 718, 750, 761, 2173]) #surface area phy
 #sap1 = np.array([14, 53, 98])
 sap2 = np.array([210, 225, 228, 253, 261])
 sap3 = np.array([718, 750, 761])
-sap4 = np.array([2173])
+sap4 = np.array([2163, 2182, 2173])
+# sap4 = np.array([2173])
 
 
 volp = np.array([59, 84, 66, 68, 87, 280, 229, 224, 1053]) # volume phylogenesis
 #volp1 = np.array([3, 11, 23])
 volp2 = np.array([59, 84, 66, 68, 87])
 volp3 = np.array([280, 229, 224])
-volp4 = np.array([1053])
+volp4 = np.array([1047,1063,1068])
+# volp4 = np.array([1053])
 
 sao = np.array([248,279,333,396,405,501,577,616,717,769,881,917,968,1034,1132]) #surface area ontogenesis
 volo = np.array([125,139,148,174,180,199,218,223,247,256,281,287,298,310,337]) # volume otogenesis
