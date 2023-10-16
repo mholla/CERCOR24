@@ -173,8 +173,29 @@ fit = MANOVA.from_formula('GI+SA+SD+SI+CT+CTR+VOL+CT_GYR+CT_SULC ~ SAGE', data=d
 print(fit.mv_test())
 
 ################################################################################
+# convert the continuous global shape index feature into categorical variable
+# Reread all the variables! Lines 22 to 145!!!
+
+for i in range(len(si)):
+    if si[i] >= 0.16:
+        si[i] = 1
+    elif si[i] <= 0.16 and si[i] > 0.1:
+        si[i] = 2
+    else :
+        si[i] = 3
+        
+si = si.astype(str)
+
+# ancova controlling for age of subjects, age being the covariate
+from pingouin import ancova
+
+ancova(data=df, dv='SA', covar='SAGE', between='SI')
+ancova(data=df, dv='SD', covar='SAGE', between='SI')
+ancova(data=df, dv='VOL', covar='SAGE', between='SI')
+
+################################################################################
 # convert the continuous scan ages feature into categorical variable
-# Reread all the variables! Lines 32 to 150!!!
+# Reread all the variables! Lines 22 to 145!!!
 
 for i in range(len(sage)):
     if sage[i] <= 31:
